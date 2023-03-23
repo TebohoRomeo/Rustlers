@@ -1,0 +1,47 @@
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="large" color="#E33C17" type="square-jelly-box" [fullScreen]="true">
+    <p style="color: #FFFFFF; font-weight: bolder; font-size: 22px;">Loading</p>
+  </ngx-spinner>
+  <div class="header-card">
+    <h2>{{business.name}}</h2>
+  </div>
+  <div class="card-white">
+    <div class="card-body">
+      <div class="card-image">
+        <img [src]="business.logo" alt="" class="logo">
+      </div>
+      <div class="card-details">
+        <p class="details">
+          {{business.description}}
+        </p>
+        <!-- <p class="details">
+          Category : {{category}}
+        </p> -->
+        <p class="details">
+          Phone : {{business.phoneNumber}}
+        </p>
+        <p class="details">
+          Alternative Phone : {{business.alternativePhoneNumber}}
+        </p>
+        <p class="details">
+          Email Address : {{business.emailAddress}}
+        </p>
+        <p class="details">
+          Website : <a href="http://{{business.website}}" target="_blank">{{business.website}}</a>
+        </p>
+        <div class="social-links">
+          <div class="social-links-fa-tw">
+            <a href="{{business.facebookLink}}" target="_blank">
+              <i class="fa fa-facebook-square" aria-hidden="true" style="font-size: 100px; color: #3b5998;"></i>
+            </a>
+            <a href="{{business.twitterLink}}" target="_blank">
+              <i class="fa fa-twitter-square" aria-hidden="true" style="font-size: 100px; color: #00acee"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+    <div class="card-footer">
+      <a class="btn-back" (click)="goBackToList()">Back</a>
+    </div>
+  </div>
